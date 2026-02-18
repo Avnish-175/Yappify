@@ -48,27 +48,3 @@ It supports live messaging, user authentication, and a responsive dashboard insp
 
 ```bash
 git clone https://github.com/Avnish-175/Yappify.git
-
-```md
-2. Open in Visual Studio  
-3. Update connection string in `appsettings.json`  
-4. Run database scripts  
-5. Press F5  
-
----
-
-## 🎯 Learning Outcomes
-
-- Real-time communication using SignalR  
-- MVC architecture  
-- SQL integration using ADO.NET  
-- Frontend UI design  
-- Authentication flows  
-- Full-stack debugging  
-
----
-
-## 🙋 Author
-
-Avnish  
-Internship Project – 2025
