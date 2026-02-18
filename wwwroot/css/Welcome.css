@@ -1,0 +1,74 @@
+﻿#usernameSection {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 16px;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #ff66cc;
+    box-shadow: 0 0 12px #ff33cc;
+}
+
+input#usernameInput {
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+}
+
+.feedback {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.suggestions {
+    margin-top: 10px;
+}
+
+.suggestion-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 10px;
+    margin: 3px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+    .suggestion-item:hover {
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+.username-box {
+    width: 400px;
+    margin: 10% auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+    .username-box input {
+        padding: 10px;
+        width: 80%;
+        margin: 10px 0;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .username-box button {
+        background-color: #ff00ff;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+.feedback {
+    margin-top: 10px;
+    font-size: 14px;
+}

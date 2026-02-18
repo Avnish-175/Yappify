@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Choose Username";
+    // Get userId from the ViewBag set by the UsernameController.Welcome() action
+    var userIdFromViewBag = ViewBag.UserId as string; // Will contain the string representation of user ID
+}
+
+<link href="~/css/welcome.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="username-box">
+    <h2>Pick your public username</h2>
+    <input id="usernameInput" type="text" placeholder="e.g., avnish_123" />
+    <p id="feedback" class="feedback"></p>
+    <button id="saveBtn">Save</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // ✅ CRITICAL: Pass the userId directly from the server to JavaScript
+    var currentAuthenticatedUserId = @(Html.Raw(Json.Serialize(userIdFromViewBag)));
+</script>
+
+<script src="~/js/welcome.js"></script>

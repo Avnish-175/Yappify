@@ -1,0 +1,134 @@
+﻿<div id="container" class="container">
+
+    <!-- FORM SECTION -->
+    <div class="row">
+        <!-- SIGN UP -->
+        <div class="col align-items-center flex-col sign-up">
+            <div class="form-wrapper align-items-center">
+                <div class="form sign-up">
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" id="username" placeholder="Username">
+                        <small id="usernameError" class="error-message"></small>
+
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bx-mail-send'></i>
+                        <input type="email" id="email" placeholder="Email">
+                        <small id="emailError" class="error-message"></small>
+
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-phone'></i>
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <small id="phoneError" class="error-message"></small>
+
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" id="password" placeholder="Password">
+                        <small id="passwordError" class="error-message"></small>
+
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" />
+                        <small id="confirmPasswordError" class="error-message"></small>
+                    </div>
+                    <button type="submit" id="signUpBtn">Sign Up</button>
+                    <h5>
+                        <span>
+                            Already have an account?
+                        </span>
+                        <b onclick="toggle()" class="pointer">
+                            Sign in here
+                        </b>
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <!-- END SIGN UP -->
+        <!-- SIGN IN -->
+        <div class="col align-items-center flex-col sign-in">
+            <div class="form-wrapper align-items-center">
+                <div class="form sign-in">
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" id="txtUserID" placeholder="Email / Phone number">
+                        <small id="loginEmailError" class="error-message"></small>
+
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" id="txtPassword" placeholder="Password">
+                    </div>
+                    <button type="submit" id="loginBtn">LogIn</button>
+                    <div id="loginErrorBox" class="error-box"></div>
+
+                    <p>
+                        <b>
+                            Forgot password?
+                        </b>
+                    </p>
+                    <h5>
+                        <span>
+                            Don't have an account?
+                        </span>
+                        <b onclick="toggle()" class="pointer">
+                            Sign up here
+                        </b>
+                    </h5>
+                </div>
+            </div>
+            
+        </div>
+        <!-- END SIGN IN -->
+    </div>
+    <!-- END FORM SECTION -->
+    <!-- CONTENT SECTION -->
+    <div class="row content-row">
+        <!-- SIGN IN CONTENT -->
+        <div class="col align-items-center flex-col">
+            <div class="curve-content-wrapper sign-in">
+                <div class="text sign-in">
+                    <h3>Welcome to Yappify! 👋</h3>
+                    <p>
+                        A fast, secure, and modern chat app to stay connected with your friends and teams.
+                    </p>
+                    <ul class="features">
+                        <li>🔒 Private & secure chats</li>
+                        <li>⚡ Real-time messaging</li>
+                        <li>💬 Group conversations</li>
+                        <li>🌙 Dark mode interface</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="logo-container">
+              <!--logo add-->
+            </div>
+        </div>
+
+        <!-- SIGN UP CONTENT -->
+        <div class="col align-items-center flex-col">
+            <div class="img sign-up">
+                <!-- Optional image/logo -->
+            </div>
+            <div class="curve-content-wrapper sign-up">
+                <div class="text sign-up">
+                    <h3>Join Yappify Today 🚀</h3>
+                    <p>
+                        Experience a beautiful, blazing-fast messaging platform with modern UI and live chat.
+                    </p>
+                    <ul class="features">
+                        <li>🔔 Instant notifications</li>
+                        <li>👥 Create or join groups</li>
+                        <li>💡 Smart, sleek design</li>
+                        <li>🔗 Easy signup & login</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTENT SECTION -->
+    </div>
+

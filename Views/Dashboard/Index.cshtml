@@ -1,0 +1,136 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<link href="~/css/dashboard.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.min.js"></script>
+
+<div class="dashboard">
+    <div class="wave"></div>
+
+    <!-- Sidebar -->
+    <div class="sidebar glass" id="sidebar">
+        <div class="logo" id="mobileLogo">
+            <img src="~/Images/logo3.png" alt="Yappify Logo" />
+        </div>
+        <div class="nav-tabs">
+            <span class="tab active" data-tab="chats"><i class="fas fa-comments"></i><span class="label">Chats</span></span>
+            <span class="tab" data-tab="friend-search"><i class="fas fa-user-plus"></i><span class="label">Find Friends</span></span>
+            <span class="tab" data-tab="friends"><i class="fas fa-users"></i><span class="label">Friends</span></span>
+
+            <span class="tab" data-tab="requests"><i class="fas fa-user-friends"></i><span class="label">Requests</span></span>
+            <span class="tab" data-tab="calls"><i class="fas fa-phone"></i><span class="label">Calls</span></span>
+            <span class="tab" data-tab="status"><i class="fas fa-circle-notch"></i><span class="label">Status</span></span>
+            <span class="tab" data-tab="settings"><i class="fas fa-cog"></i><span class="label">Settings</span></span>
+        </div>
+        <div class="chat-list"></div>
+        <div class="user-bottom">
+            <img src="~/images/Default-Avatar.png" class="profile-pic" id="profileToggle" />
+        </div>
+    </div>
+
+    <!-- Toggle Button -->
+    <button id="toggleSidebar" class="toggle-btn">&#9776;</button>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main">
+        <div class="tab-content">
+
+            <!-- Chats -->
+            <div id="chats-panel" class="tab-panel active">
+                <div class="chat-header" id="chatHeader">
+                    <img src="~/images/default-avatar.png" class="chat-user-pic" />
+                    <div class="chat-user-info">
+                        <h3 class="chat-username">Select a chat</h3>
+                        <span class="chat-status">Online</span>
+                    </div>
+                </div>
+                <div class="chat-body"></div>
+                <div class="chat-input">
+                    <button id="uploadButton" class="icon-button"><i class="fas fa-paperclip"></i></button>
+                    <input type="file" id="fileInput" hidden />
+                    <input type="text" id="messageInput" placeholder="Type a message..." />
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+
+            <!-- Friend Search -->
+            <div id="friend-search-panel" class="tab-panel">
+                <div class="tab-panel-header">Find New Friends</div>
+                <div class="panel-body-scroll">
+                    <input type="text" id="userSearchInput" placeholder="Search by username..." class="panel-search" />
+                    <div id="searchResults" class="contact-list"></div>
+                </div>
+            </div>
+
+
+            <!-- Calls -->
+            <div id="calls-panel" class="tab-panel">
+                <div class="tab-panel-header">Call History</div>
+                <div class="panel-body-scroll">
+                    <p>We're constantly working to improve your experience. New features arriving soon</p>
+                </div>
+            </div>
+
+            <!-- Friend Requests -->
+            <div id="requests-panel" class="tab-panel">
+                <div class="tab-panel-header">Friend Requests</div>
+                <div class="panel-body-scroll">
+                    <div id="receivedRequestsContainer" class="friend-requests">
+                        <h3>Incoming Friend Requests</h3>
+                        <div id="receivedRequests"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status -->
+            <div id="status-panel" class="tab-panel">
+                <div class="tab-panel-header">Status Updates</div>
+                <div class="panel-body-scroll">
+                    <div class="status-upload">
+                        <textarea placeholder="Share something..."></textarea>
+                        <button class="btn-primary">Post</button>
+                    </div>
+                    <p>No statuses to show.</p>
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div id="settings-panel" class="tab-panel">
+                <div class="tab-panel-header">Settings</div>
+                <div class="panel-body-scroll">
+                    <label>Profile Picture</label>
+                    <img src="/images/default-avatar.png" id="myProfilePicPreview" class="profile-pic-large" />
+                    <input type="file" id="profilePicInput" accept="image/*" />
+                </div>
+                <div class="setting-group">
+                    <label>Online Status</label>
+                    <select id="onlineStatusVisibility">
+                        <option>Everyone</option>
+                        <option>My Contacts</option>
+                        <option>Nobody</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>About Me</label>
+                    <textarea id="aboutMeStatus" placeholder="Say something about yourself..."></textarea>
+                </div>
+                <button id="saveProfileSettings" class="btn-primary">Save Settings</button>
+                <button id="logoutButton" class="btn-secondary">Logout</button>
+            </div>
+
+            <!-- Friends Panel -->
+            <div id="friends-panel" class="tab-panel">
+                <div class="tab-panel-header">Your Friends</div>
+                <div class="panel-body-scroll" id="friendsList"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="~/js/Dashboard.js"></script>
